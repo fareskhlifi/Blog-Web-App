@@ -1,4 +1,6 @@
-from flaskblog import app
+from flaskblog import create_app
+
+app = create_app()
 
 if __name__ == "__main__":
     app.run(debug=True)
@@ -21,6 +23,7 @@ if __name__ == "__main__":
 # get the created users
 # with app.app_context:
 #   User.query.all()
+#   instead of querying all the post we could do: variable = user.query.Paginate() and dir(variable) to see the predefined methods 
 
 # other commands: user.query.filter_by(username='example').all()
 # first user: User.query.first()
